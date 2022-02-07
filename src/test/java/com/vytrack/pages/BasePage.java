@@ -38,7 +38,6 @@ public abstract class  BasePage {
         PageFactory.initElements(Driver.get(), this);
     }
 
-
     /**
      * @return page name, for example: Dashboard
      */
@@ -48,8 +47,6 @@ public abstract class  BasePage {
 //        BrowserUtils.waitForStaleElement(pageSubTitle);
         return pageSubTitle.getText();
     }
-
-
     /**
      * Waits until loader screen present. If loader screen will not pop up at all,
      * NoSuchElementException will be handled  bu try/catch block
@@ -62,17 +59,12 @@ public abstract class  BasePage {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
     public String getUserName(){
         waitUntilLoaderScreenDisappear();
         BrowserUtils.waitForVisibility(userName, 5);
         return userName.getText();
     }
-
-
-
     public void logOut(){
         BrowserUtils.waitFor(2);
         BrowserUtils.clickWithJS(userName);
@@ -82,9 +74,7 @@ public abstract class  BasePage {
         waitUntilLoaderScreenDisappear();
         BrowserUtils.waitForClickablility(userName, 5).click();
         BrowserUtils.waitForClickablility(myUser, 5).click();
-
     }
-
     /**
      * This method will navigate user to the specific module in vytrack application.
      * For example: if tab is equals to Activities, and module equals to Calls,

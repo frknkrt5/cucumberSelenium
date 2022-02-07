@@ -61,7 +61,6 @@ public class ContactsStepDefs {
         Assert.assertEquals(expectedName,actualName);
         System.out.println("expectedName = " + expectedName);
         System.out.println("actualName = " + actualName);
-
     }
 
 
